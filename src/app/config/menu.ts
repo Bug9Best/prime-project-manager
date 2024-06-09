@@ -4,12 +4,12 @@ export var ConfigMenu = [
         icon: 'pi-chevron-down',
         expanded: true,
         items: [
-            { label: 'dashboard', icon: 'pi-home', routerLink: ['/dashboard'] },
-            { label: 'sprint', icon: 'pi-home', routerLink: ['/sprint'] },
-            { label: 'backlog', icon: 'pi-home', routerLink: ['/backlog'] },
-            { label: 'timeline', icon: 'pi-home', routerLink: ['/timeline'] },
-            { label: 'board', icon: 'pi-home', routerLink: ['/board'] },
-            { label: 'list', icon: 'pi-home', routerLink: ['/list'] },
+            { label: 'dashboard', icon: 'pi-th-large', routerLink: ['/dashboard'] },
+            { label: 'sprint', icon: 'pi-spinner', routerLink: ['/sprint'] },
+            { label: 'backlog', icon: 'pi-align-left', routerLink: ['/backlog'] },
+            { label: 'timeline', icon: 'pi-calendar-clock', routerLink: ['/timeline'] },
+            { label: 'board', icon: 'pi-clipboard', routerLink: ['/board'] },
+            { label: 'list', icon: 'pi-list-check', routerLink: ['/list'] },
         ]
     },
     {
