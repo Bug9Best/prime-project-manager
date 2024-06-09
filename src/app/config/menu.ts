@@ -1,23 +1,24 @@
 export var ConfigMenu = [
     {
-        label: 'Planning',
+        label: 'TITLE_PLANNING',
         icon: 'pi-chevron-down',
         expanded: true,
         items: [
-            { label: 'dashboard', icon: 'pi-th-large', routerLink: ['/dashboard'] },
-            { label: 'sprint', icon: 'pi-spinner', routerLink: ['/sprint'] },
-            { label: 'backlog', icon: 'pi-align-left', routerLink: ['/backlog'] },
-            { label: 'timeline', icon: 'pi-calendar-clock', routerLink: ['/timeline'] },
-            { label: 'board', icon: 'pi-clipboard', routerLink: ['/board'] },
-            { label: 'list', icon: 'pi-list-check', routerLink: ['/list'] },
+            { label: 'MENU_DASHBOARD', icon: 'pi-th-large', routerLink: ['/dashboard'] },
+            { label: 'MENU_SPRINT', icon: 'pi-spinner', routerLink: ['/sprint'] },
+            { label: 'MENU_BACKLOG', icon: 'pi-align-left', routerLink: ['/backlog'] },
+            { label: 'MENU_TIMELINE', icon: 'pi-calendar-clock', routerLink: ['/timeline'] },
+            { label: 'MENU_BOARD', icon: 'pi-clipboard', routerLink: ['/board'] },
+            { label: 'MENU_LIST', icon: 'pi-list-check', routerLink: ['/list'] },
         ]
     },
     {
-        label: 'Config',
+        label: 'TITLE_CONFIG',
         icon: 'pi-chevron-down',
         expanded: true,
         items: [
-            { label: 'project-setting', icon: 'pi-home', routerLink: ['/project-setting'] },
+            { label: 'MENU_PROJECT_MEMBER', icon: 'pi-users', routerLink: ['/project-member'] },
+            { label: 'MENU_PROJECT_SETTING', icon: 'pi-cog', routerLink: ['/project-setting'] },
         ]
     },
 ]
