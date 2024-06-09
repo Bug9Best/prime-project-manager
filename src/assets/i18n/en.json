@@ -3,6 +3,17 @@
   "HELLO": "Hello",
   "WELCOME": "Welcome to our application!",
 
+  "TITLE_PLANNING": "Planning",
+  "MENU_DASHBOARD": "Dashboard",
+  "MENU_SPRINT": "Sprint",
+  "MENU_BACKLOG": "Backlog",
+  "MENU_TIMELINE": "Timeline",
+  "MENU_BOARD": "Board",
+  "MENU_LIST": "List",
+  "TITLE_CONFIG": "Configuration",
+  "MENU_PROJECT_MEMBER": "Project Member",
+  "MENU_PROJECT_SETTING": "Project Setting",
+
 
   "FOOTER_UNIVERSITY_NAME": "King Mongkut's Institute of Technology Ladkrabang",
   "FOOTER_UNIVERSITY_LOCATE": "1 Chalong Krung 1 Alley, Lat Krabang, Khet Lat Krabang, Krung Thep Maha Nakhon 10520, Thailand",

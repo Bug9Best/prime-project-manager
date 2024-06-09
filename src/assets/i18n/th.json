@@ -2,6 +2,17 @@
   "LANGUAGE": "ภาษาไทย",
   "HELLO": "สวัสดี",
   "WELCOME": "ยินดีต้อนรับ",
+
+  "TITLE_PLANNING": "การวางแผนงาน",
+  "MENU_DASHBOARD": "แดชบอร์ด",
+  "MENU_SPRINT": "สปรินต์",
+  "MENU_BACKLOG": "แบคล็อก",
+  "MENU_TIMELINE": "ไทมไลน์",
+  "MENU_BOARD": "กระดาน",
+  "MENU_LIST": "รายการ",
+  "TITLE_CONFIG": "การตั้งค่า",
+  "MENU_PROJECT_MEMBER": "สมาชิกโปรเจค",
+  "MENU_PROJECT_SETTING": "ตั้งค่าโปรเจค",
   
   "FOOTER_UNIVERSITY_NAME": "สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
   "FOOTER_UNIVERSITY_LOCATE": "ถนนฉลองกรุง เขตลาดกระบัง กรุงเทพฯ 10520, ประเทศไทย",
