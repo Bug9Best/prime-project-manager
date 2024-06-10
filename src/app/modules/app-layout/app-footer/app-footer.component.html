@@ -1,4 +1,5 @@
-<div class="grid grid-nogutter surface-section px-4 py-4 md:px-6 lg:px-8 border-top-1 surface-border">
+@if ( isFullOptions() ) {
+<div class="grid grid-nogutter surface-ground px-4 py-4 md:px-6 lg:px-8 ">
   <div class="col-12 lg:col-6 lg:border-right-1 surface-border">
     <span class="text-900 block mt-4 mr-3"> {{ 'FOOTER_UNIVERSITY_NAME' | translate }} </span>
     <span class="text-900 block mr-3"> {{ 'FOOTER_UNIVERSITY_LOCATE' | translate }} </span>
@@ -32,3 +33,10 @@
     </div>
   </div>
 </div>
+}
+@else {
+<div class="p-1 flex flex-column justify-content-center align-items-center">
+  <span class="text-400"> {{ 'FOOTER_UNIVERSITY_NAME' | translate }} </span>
+  <span class="text-400">Copyright © 2024 IT&#64;KMITL. All rights reserved</span>
+</div>
+}
