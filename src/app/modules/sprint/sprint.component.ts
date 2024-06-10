@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './sprint.component.scss'
 })
 export class SprintComponent {
+  checked:boolean = false;
 
 }

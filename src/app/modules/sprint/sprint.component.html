@@ -1,16 +1,37 @@
 <div class="grid">
-    <div class="col-12 lg:col-6">
-      <div class="p-3 surface-overlay border-1 surface-border border-round">
-        
-      </div>
+  <div class="col-12">
+    <div class="p-4 surface-overlay border-1 surface-border border-round">
+        <div class="grid">
+        <div class="col-1">
+        <p-checkbox
+        [(ngModel)]="checked" 
+        [binary]="true" 
+        inputId="binary" />
     </div>
-    <div class="col-12 lg:col-6">
-      <div class="p-3 surface-overlay border-1 surface-border border-round">
-        
-      </div>
+        <div class="col-1" >
+        <label for="ny">Sprint</label>
     </div>
-  </div>
-  
-  <div class="mt-2 p-3 surface-overlay border-1 surface-border border-round">
+    <div class="col-7">
+    <div >
+        <label class="text-xs" for="ny">28 Apr - 12 May</label>
+        <label class="text-xs ml-2" for="issue">( 1 Issue )</label>
+    </div>
+    </div>
+    <div class="col">
+        <div>
+        <label class="text-xs bg-black-alpha-20" for="todo">0</label>
+        <label class="text-xs bg-blue-200 ml-2" for="inprogress">0</label>
+        <label class="text-xs bg-green-500 ml-2" for="Done">0</label>
+    </div>
     
-  </div>
+    </div>
+    <div class="col-2">
+    <label
+    class="flex px-6 p-6 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-50 font-mn border-round cursor-pointer transition-colors transition-duration-150">
+    <label class="pi text-md lg:text-md mr-2 lg:mr-0"
+>Complete</label>
+</label>
+</div>
+</div>
+</div>
+
