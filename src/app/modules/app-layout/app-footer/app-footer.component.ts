@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { DividerModule } from 'primeng/divider';
 
@@ -13,5 +13,5 @@ import { DividerModule } from 'primeng/divider';
   styleUrl: './app-footer.component.scss'
 })
 export class AppFooterComponent {
-
+  isFullOptions = input<boolean>(true);
 }
