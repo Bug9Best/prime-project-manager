@@ -3,7 +3,9 @@ import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { AppLayoutService } from '../app-layout.service';
+import { ConfigLanguage } from '../../../config/language';
 
 @Component({
   selector: 'app-topbar',
@@ -19,39 +21,21 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class AppTopbarComponent {
 
-  languageItems: MenuItem[] | undefined;
+  isLightTheme: boolean = true;
+  languageItems: MenuItem[] | undefined = new ConfigLanguage().ConfigLanguage;
 
   constructor(
-    private translate: TranslateService
+    private appLayoutService: AppLayoutService,
   ) {
-    translate.setDefaultLang('en');
-    translate.use('en');
   }
 
-  ngOnInit() {
-    this.languageItems = [
-      {
-        items: [
-          {
-            id: 'TH',
-            label: 'ภาษาไทย',
-            command: () => {
-              this.switchLanguage('th');
-            }
-          },
-          {
-            id: 'EN',
-            label: 'English',
-            command: () => {
-              this.switchLanguage('en');
-            }
-          }
-        ]
-      }
-    ];
+  set theme(val: string) {
+    this.appLayoutService.setActiveTheme(val);
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
+  switchTheme(isLightTheme: boolean) {
+    const theme = isLightTheme ? 'lara-dark-blue' : 'lara-light-blue';
+    this.isLightTheme = !isLightTheme;
+    this.theme = theme;
   }
 }
