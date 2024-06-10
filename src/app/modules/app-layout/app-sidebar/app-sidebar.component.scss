@@ -1,11 +1,11 @@
 .h-screen-custom {
-    min-height: calc(100vh - 80px);
+  height: calc(100vh - 64px);
 }
 
-.hidden {
-    display: none;
-  }
-  
-  .highlight {
-    background-color: #e0e0e0; /* Adjust the highlight color as needed */
-  }
+.main-content {
+  min-height: calc(100vh - 64px - 32px);
+}
+
+a {
+  text-decoration: none;
+}
