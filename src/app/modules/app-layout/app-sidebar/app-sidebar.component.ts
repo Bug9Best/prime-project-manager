@@ -19,23 +19,9 @@ import { AppFooterComponent } from '../app-footer/app-footer.component';
   styleUrl: './app-sidebar.component.scss'
 })
 export class AppSidebarComponent {
+
   activeRoute: string = '';
-
-  sections = {
-    favorites: true,
-    application: true
-  };
-
-  menu: any[] = [];
-
-  ngOnInit() {
-    this.menu = ConfigMenu;
-    this.router.events.subscribe((event: any) => {
-      if (event instanceof NavigationEnd) {
-        this.activeRoute = event.urlAfterRedirects;
-      }
-    });
-  }
+  menu: any[] = ConfigMenu;
 
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
