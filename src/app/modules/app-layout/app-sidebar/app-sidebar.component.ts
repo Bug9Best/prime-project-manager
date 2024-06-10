@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
 import { ConfigMenu } from '../../../config/menu';
+import { TranslateModule } from '@ngx-translate/core';
+import { AppFooterComponent } from '../app-footer/app-footer.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,6 +12,8 @@ import { ConfigMenu } from '../../../config/menu';
     CommonModule,
     RouterModule,
     RouterOutlet,
+    TranslateModule,
+    AppFooterComponent
   ],
   templateUrl: './app-sidebar.component.html',
   styleUrl: './app-sidebar.component.scss'
