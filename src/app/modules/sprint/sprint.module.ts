@@ -25,7 +25,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     PrimeNGModule,
-    ButtonModule
+    ButtonModule,
+    CheckboxModule
   ]
   
 })

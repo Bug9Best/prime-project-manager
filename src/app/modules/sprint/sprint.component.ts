@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class SprintComponent {
   checked:boolean = false;
 
+  thisShow:boolean = false;
+
+  onclick() {
+    this.thisShow = !this.thisShow;
+  }
 }
