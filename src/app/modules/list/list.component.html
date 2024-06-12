@@ -1,3 +1,43 @@
-<div class="col-8">
-    <input type="text" pInputText formControlName="text" />
+<div class="card">
+  <div class="col-8 mt-2">
+    <p-floatLabel class="mt-">
+      <input pInputText id="username" />
+      <label for="username">Search</label>
+    </p-floatLabel>
   </div>
+  <p-table [scrollable]="true" scrollHeight="400px" [value]="value">
+    <ng-template pTemplate="header">
+      <tr>
+        <th><p-checkbox [binary]="true" inputId="binary"  />
+    </th>
+        <th style="min-width: 200px">Type</th>
+        <th style="min-width: 200px">Key</th>
+        <th style="min-width: 200px">Summary</th>
+        <th style="min-width: 200px">Status</th>
+        <th style="min-width: 200px">Sprint</th>
+        <th style="min-width: 200px">Assignee</th>
+        <th style="min-width: 200px">Due date</th>
+        <th style="min-width: 200px">Labels</th>
+        <th style="min-width: 200px">Created</th>
+        <th style="min-width: 200px">Updated</th>
+        <th style="min-width: 200px">Reporter</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td><p-checkbox [binary]="true" inputId="binary"  /></td>
+        <td>{{ item.type}}</td>
+        <td>{{ item.key}}</td>
+        <td>{{ item.summary}}</td>
+        <td>{{ item.status}}</td>
+        <td>{{ item.sprint}}</td>
+        <td>{{ item.assignee}}</td>
+        <td>{{ item.duedate}}</td>
+        <td>{{ item.labels}}</td>
+        <td>{{ item.created}}</td>
+        <td>{{ item.updated}}</td>
+        <td>{{ item.reporter}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
