@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './sprint.component.scss'
 })
 export class SprintComponent {
+  checked:boolean = false;
 
+  thisShow:boolean = false;
+
+  onclick() {
+    this.thisShow = !this.thisShow;
+  }
 }

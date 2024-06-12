@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { BacklogComponent } from './backlog.component';
+import { CheckboxModule } from 'primeng/checkbox';
+import { PrimeNGModule } from '../../shared/primeng.module';
+import { ButtonModule } from 'primeng/button';
 
 const routes: Routes = [
   {
@@ -16,7 +19,10 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    PrimeNGModule,
+    ButtonModule,
+    CheckboxModule
   ]
 })
 export class BacklogModule { }
