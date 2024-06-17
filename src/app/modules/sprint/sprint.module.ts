@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CheckboxModule } from 'primeng/checkbox';
 import { PrimeNGModule } from '../../shared/primeng.module';
 import { ButtonModule } from 'primeng/button';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
     CommonModule,
     PrimeNGModule,
     ButtonModule,
-    CheckboxModule
+    CheckboxModule,
+    TranslateModule
   ]
   
 })

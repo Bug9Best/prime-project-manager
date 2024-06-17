@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { PrimeNGModule } from '../../shared/primeng.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AssignMeComponent } from '../../shared/components/assign-me/assign-me.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     PrimeNGModule,
-    AssignMeComponent
+    AssignMeComponent,
+    TranslateModule
   ]
 })
 export class DashboardModule { }

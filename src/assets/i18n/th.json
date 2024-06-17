@@ -1,18 +1,41 @@
 {
   "LANGUAGE": "ภาษาไทย",
-  "HELLO": "สวัสดี",
-  "WELCOME": "ยินดีต้อนรับ",
+  "SEARCH_TEXT": "ค้นหา",
 
   "TITLE_PLANNING": "การวางแผนงาน",
   "MENU_DASHBOARD": "แดชบอร์ด",
+  "TITLE_DASHBOARD": "แดชบอร์ด",
+
   "MENU_SPRINT": "สปรินต์",
+  "TITLE_SPRINT": "สปรินต์",
+
   "MENU_BACKLOG": "แบคล็อก",
+  "TITLE_BACKLOG": "แบคล็อก",
+  "TITLE_ISSUE": "งานที่ต้องทำ",
+  "LABEL_NO_SPRINT": "ไม่มีสปรินต์ที่กำลังดำเนินการอยู่",
+  "DESCRIPTION_NO_SPRINT": "กรุณาสร้างสปรินต์เพื่อเริ่มต้นการวางแผนงาน",
+  "LABEL_NO_ISSUE": "ไม่มีงานที่ต้องทำ",
+  "BUTTON_CREATE_SPRINT": "สร้างสปรินต์ใหม่",
+  "DESCRIPTION_NO_ISSUE": "กรุณาสร้างงานที่ต้องทำเพื่อเริ่มต้นการวางแผนงาน",
+  "BUTTON_CREATE_ISSUE": "สร้างงานที่ต้องทำใหม่",
+
   "MENU_TIMELINE": "ไทมไลน์",
+  "TITLE_TIMELINE": "ไทมไลน์",
+
   "MENU_BOARD": "กระดาน",
+  "TITLE_BOARD": "กระดาน",
+
   "MENU_LIST": "รายการ",
+  "TITLE_LIST": "รายการ",
+
   "TITLE_CONFIG": "การตั้งค่า",
   "MENU_PROJECT_MEMBER": "สมาชิกโปรเจค",
   "MENU_PROJECT_SETTING": "ตั้งค่าโปรเจค",
+
+  "BUTTON_CREATE": "สร้าง",
+  "BUTTON_SAVE": "บันทึก",
+  "BUTTON_CANCEL": "ยกเลิก",
+  "BUTTON_EDIT": "แก้ไข",
   
   "FOOTER_UNIVERSITY_NAME": "สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง",
   "FOOTER_UNIVERSITY_LOCATE": "ถนนฉลองกรุง เขตลาดกระบัง กรุงเทพฯ 10520, ประเทศไทย",

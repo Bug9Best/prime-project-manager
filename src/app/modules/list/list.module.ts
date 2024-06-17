@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './list.component';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     TableModule,
-    InputTextModule
+    InputTextModule,
+    TranslateModule
   ]
 })
 export class ListModule { }
