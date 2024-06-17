@@ -60,6 +60,9 @@ import { SkeletonModule } from 'primeng/skeleton';
 import { ChipModule } from 'primeng/chip';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { DragDropModule } from 'primeng/dragdrop';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 
 let modules = [
   ButtonModule,
@@ -120,7 +123,10 @@ let modules = [
   SkeletonModule,
   ChipModule,
   InputGroupModule,
-  InputGroupAddonModule
+  InputGroupAddonModule,
+  DragDropModule,
+  IconFieldModule,
+  InputIconModule
 ]
 
 @NgModule({

@@ -4,9 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './list.component';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
-import { FloatLabelModule } from 'primeng/floatlabel';
-import { CheckboxModule } from 'primeng/checkbox';
-
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const routes: Routes = [
@@ -25,8 +23,7 @@ const routes: Routes = [
     CommonModule,
     TableModule,
     InputTextModule,
-    FloatLabelModule,
-    CheckboxModule
+    TranslateModule
   ]
 })
 export class ListModule { }

@@ -1,1 +1,26 @@
-<p>board works!</p>
+<div class="p-3 surface-overlay border-1 surface-border border-round">
+  <board-control>
+  </board-control>
+</div>
+
+<div class="mt-3 flex overflow-x-auto">
+  <div class="mr-3" *ngFor="let board of listBoard">
+    <p-panel [header]="board.name" pDroppable (onDrop)="onDropItem(board)">
+      <div *ngFor="let item of board.items"  
+        pDraggable 
+        (onDragEnd)="onDragEnd()" 
+        (onDragStart)="onDragStart(board, item)"
+        class="p-3 surface-overlay border-1 surface-border border-round mb-2 cursor-pointer">
+        <div class="p-card-header">{{ item.title }}</div>
+        <div class="p-card-body">{{ item.description }}</div>
+      </div>
+    </p-panel>
+  </div>
+  <div class="p-0">
+    <div class="create-board surface-overlay border-2 border-dashed  surface-border border-round">
+      <i class="pi pi-plus border-2 border-dashed border-circle p-3" 
+        style="font-size: 1.5rem; color: var(--gray-300); border-color: var(--gray-300);">
+      </i>
+    </div>
+  </div>
+</div>
