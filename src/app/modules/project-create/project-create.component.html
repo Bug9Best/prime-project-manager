@@ -1,0 +1,58 @@
+  <div class="flex justify-content-center mt-8">
+    <div
+      class="lex-column align-items-center justify-content-center w-10 mt-2 p-3 content-container surface-overlay border-1 surface-border border-round"
+    >
+      <div class="w-full">
+        <p>Create project</p>
+        <p-divider class="" />
+        <div class="grid">
+          <div class="col-8">
+            <p>Project name</p>
+            <div>
+              <input
+                class="h-3rem w-full"
+                type="text"
+                pInputText
+                formControlName="text"
+                placeholder="Enter your project name"
+              />
+            </div>
+            <div class="mt-5">
+              <p>Select template</p>
+              <p-divider type="dashed" />
+            </div>
+            <!-- Template -->
+            <div>
+              <p>Agile</p>
+            </div>
+            <div>
+              <p>Waterfall</p>
+            </div>
+            <div>
+              <p>Scrum</p>
+            </div>
+          </div>
+
+          <p-divider layout="vertical" />
+          <div>
+            <div class="col-4">
+              <p>logo</p>
+            </div>
+          </div>
+        </div>
+        <p-divider />
+        <!-- Button -->
+        <div class="flex justify-content-end flex-wrap">
+          <div>
+            <p-button
+              label="Cancel"
+              [text]="true"
+              [raised]="true"
+              severity="secondary"
+            />
+            <p-button class="ml-2" label="Create" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,7 +1,7 @@
 <button pButton pRipple
   [label]="'BUTTON_CREATE_SPRINT' | translate"
   (click)="showDialog()"
-  class="p-button-secondary p-button-text p-button-sm w-full">
+  class="p-button-primary p-button-text p-button-sm w-full">
 </button>
 
 <p-dialog header="Header" 
@@ -45,7 +45,7 @@
   </div>
 
   <ng-template pTemplate="footer">
-      <p-button label="Cancel" [text]="true" severity="secondary" (click)="visible = false" size="small"/>
+      <p-button label="Cancel" [text]="true" severity="primary" (click)="visible = false" size="small"/>
       <p-button label="Create Sprint" icon="pi pi-save" severity="primary" (click)="onCreate()" size="small" />
   </ng-template>
 </p-dialog>
