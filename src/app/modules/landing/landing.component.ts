@@ -6,6 +6,7 @@ import { PrimeNGModule } from '../../shared/primeng.module';
   standalone: true,
   imports: [
     PrimeNGModule
+
   ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
