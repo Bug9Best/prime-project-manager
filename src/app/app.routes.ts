@@ -22,6 +22,7 @@ export const routes: Routes = [
     { path: 'project-create', loadChildren: () => import('./modules/project-create/project-create.module').then(m => m.ProjectCreateModule)},
     { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
     { path: 'landing', loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule) },
+    { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) },
     { path: 'notfound', component: NotfoundComponent },
     { path: '**', redirectTo: '/notfound' },
 ];
