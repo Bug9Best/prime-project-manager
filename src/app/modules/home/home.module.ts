@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SectionGetstartedComponent } from './section-getstarted/section-getstarted.component';
 import { SectionFeaturesComponent } from './section-features/section-features.component';
 import { SectionDeveloperComponent } from './section-developer/section-developer.component';
+import { AppFooterComponent } from '../app-layout/app-footer/app-footer.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     PrimeNGModule,
-    TranslateModule
+    TranslateModule,
+    AppFooterComponent
   ]
 })
 export class HomeModule { }

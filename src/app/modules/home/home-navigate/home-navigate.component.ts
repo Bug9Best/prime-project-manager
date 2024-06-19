@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ConfigLanguage } from '../../../config/language';
 import { AppLayoutService } from '../../app-layout/app-layout.service';
@@ -12,6 +12,13 @@ export class HomeNavigateComponent {
 
   isLightTheme: boolean = true;
   languageItems: MenuItem[] | undefined = new ConfigLanguage().ConfigLanguage;
+
+  listMenu: any[] = [
+    { id: 1, label: 'Get Started', element: 'getstarted' },
+    { id: 2, label: 'Features', element: 'features' },
+    { id: 3, label: 'Developers Team', element: 'team' },
+    { id: 4, label: 'About', element: 'about' },
+  ]
 
   constructor(
     private appLayoutService: AppLayoutService,
@@ -28,4 +35,8 @@ export class HomeNavigateComponent {
     this.theme = theme;
   }
 
+  onScrollToElementEvent = output<string>()
+  onScrollToElement(element: string) {
+    this.onScrollToElementEvent.emit(element);
+  }
 }
