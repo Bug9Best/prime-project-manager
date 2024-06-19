@@ -1,33 +1,32 @@
 <div class="p-3 surface-overlay border-1 surface-border border-round">
   <div class="surface-overlay">
-    <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
-      <span class="text-2xl font-medium text-900">{{ 'MENU_DASHBOARD' | translate }}</span>
-      <div class="flex align-items-center mt-2 md:mt-0">
-        <span class="p-input-icon-left">
-          <i class="pi pi-search"></i>
-          <input type="text" 
-            pInputText 
-            placeholder="{{ 'SEARCH_TEXT' | translate }}" 
-            class="p-inputtext-sm w-20rem" />
-        </span>
-      </div>
+    <div
+      class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+    >
+      <span class="text-2xl font-medium text-900">{{
+        "MENU_DASHBOARD" | translate
+      }}</span>
     </div>
   </div>
 </div>
+  <div class="mt-2 p-3 h-15rem surface-overlay border-1 surface-border border-round">
+    <assign-me></assign-me>
+    <total-issue></total-issue>
+  </div>
 
-<div class="grid mt-2">
+<div class="grid mt-2 ">
   <div class="col-12 lg:col-6">
-    <div class="p-3 surface-overlay border-1 surface-border border-round">
-      <assign-me></assign-me>
+    <div class="p-3 surface-overlay border-1 surface-border border-round h-10rem">
+      <p>Recent project</p>
+      <total-project></total-project>
+      <recent-project></recent-project>
+      
     </div>
   </div>
   <div class="col-12 lg:col-6">
-    <div class="p-3 surface-overlay border-1 surface-border border-round">
-      <assign-me></assign-me>
+    <div class="p-3 surface-overlay border-1 surface-border border-round h-10rem">
+      <p>Recent space</p>
+      
     </div>
   </div>
-</div>
-
-<div class="mt-2 p-3 surface-overlay border-1 surface-border border-round">
-  <assign-me></assign-me>
 </div>
