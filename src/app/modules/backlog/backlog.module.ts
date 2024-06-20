@@ -11,6 +11,7 @@ import { NoItemlistComponent } from '../../shared/components/no-itemlist/no-item
 import { BacklogIssueComponent } from './backlog-issue/backlog-issue.component';
 import { BacklogSprintComponent } from './backlog-sprint/backlog-sprint.component';
 import { BacklogSprintCreateComponent } from './backlog-sprint-create/backlog-sprint-create.component';
+import { BacklogIssueCreateComponent } from './backlog-issue-create/backlog-issue-create.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
     BacklogComponent,
     BacklogControlComponent,
     BacklogIssueComponent,
+    BacklogIssueCreateComponent,
     BacklogSprintComponent,
     BacklogSprintCreateComponent
   ],

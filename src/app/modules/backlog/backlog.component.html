@@ -3,63 +3,54 @@
     <backlog-control>
     </backlog-control>
   </div>
-<div class="grid mt-3">
-  <div class="col-6 mt-2 p-3 content-container surface-overlay border-1 surface-border border-round">
-    <div class="flex flex-column align-items-center justify-content-center">
-      <div class=" text-xl text-500 text-primary-500">{{ 'TITLE_SPRINT' | translate }}</div>
-      <p-divider class="w-full -mt-2"></p-divider>
-      <div class="w-full">
-        @if (listSprint.length) {
-          <backlog-sprint [listSprint]="listSprint">
-          </backlog-sprint>
-        }@else {
-          <no-itemlist
-            [title]="'LABEL_NO_SPRINT'"
-            [description]="'DESCRIPTION_NO_SPRINT'">
-          </no-itemlist>
-        }
-        <p-divider></p-divider>
-        <div pRipple class="mt-3 border-2 surface-border border-dashed border-round">
-          <backlog-sprint-create>
-          </backlog-sprint-create>
+
+  <div class="grid mt-2">
+    <div class="col-6">
+      <div class="p-3 content-container surface-overlay border-1 surface-border border-round">
+        <div class="flex flex-column align-items-center justify-content-center">
+          <div class="w-full flex justify-content-between align-items-center">
+            <div class=" text-xl text-500 text-primary-500">{{ 'TITLE_SPRINT' | translate }}</div>
+            <backlog-sprint-create>
+            </backlog-sprint-create>
+          </div>
+          <p-divider class="w-full -mt-2"></p-divider>
+          <div class="w-full">
+            @if (listSprint.length) {
+              <backlog-sprint [listSprint]="listSprint">
+              </backlog-sprint>
+            }@else {
+              <no-itemlist
+                [title]="'LABEL_NO_SPRINT'"
+                [description]="'DESCRIPTION_NO_SPRINT'">
+              </no-itemlist>
+            }
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="col-6 mt-2 p-3 content-container surface-overlay border-1 surface-border border-round">
-    <div class="flex flex-column align-items-center justify-content-center">
-      <div class=" text-xl text-500 text-green-400 ">{{ 'TITLE_ISSUE' | translate }}</div>
-      <p-divider class="w-full -mt-2"></p-divider>
-      <div class="w-full">
-        @if (listIssue.length) {
-          <backlog-issue [listIssue]="listIssue">
-          </backlog-issue>
-        }@else {
-          <no-itemlist 
-            [title]="'LABEL_NO_ISSUE'"
-            [description]="'DESCRIPTION_NO_ISSUE'">
-          </no-itemlist>
-        }
-        <p-divider></p-divider>
-        @if (!isCreateIssue) {
-          <div #buttonIssue pRipple class="mt-3 border-2 surface-border border-dashed border-round ">
-            <button  pButton pRipple
-              [label]="'BUTTON_CREATE_ISSUE' | translate"
-              class="p-button-success p-button-text p-button-sm w-full">
-            </button>
+    <div class="col-6">
+        <div class="p-3 content-container surface-overlay border-1 surface-border border-round">
+          <div class="flex flex-column align-items-center justify-content-center">
+            <div class="w-full flex justify-content-between align-items-center">
+              <div class=" text-xl text-500 text-orange-400 ">{{ 'TITLE_ISSUE' | translate }}</div>
+              <backlog-issue-create>
+              </backlog-issue-create>
+            </div>
+            <p-divider class="w-full -mt-2"></p-divider>
+            <div class="w-full">
+              @if (listIssue.length) {
+                <backlog-issue [listIssue]="listIssue">
+                </backlog-issue>
+              }@else {
+                <no-itemlist 
+                  [title]="'LABEL_NO_ISSUE'"
+                  [description]="'DESCRIPTION_NO_ISSUE'">
+                </no-itemlist>
+              }
+            </div>
           </div>
-        }
-        @else {
-          <input #inputIssue 
-            [(ngModel)]="issueName"
-            type="text" 
-            pInputText
-            class="w-full ">
-        }
-      </div>
+        </div>
     </div>
   </div>
-</div>
 </div>
 
