@@ -24,6 +24,7 @@ import { PrimeNGModule } from '../../../shared/primeng.module';
 })
 export class AppSidebarComponent {
 
+  visible: boolean = true;
   activeRoute: string = '';
   menu: any[] = ConfigMenu;
 

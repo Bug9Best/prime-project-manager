@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
@@ -21,6 +21,7 @@ import { ConfigLanguage } from '../../../config/language';
 })
 export class AppTopbarComponent {
 
+  stateToogleSidebar: boolean = false;
   isLightTheme: boolean = true;
   languageItems: MenuItem[] | undefined = new ConfigLanguage().ConfigLanguage;
 
@@ -37,5 +38,12 @@ export class AppTopbarComponent {
     const theme = isLightTheme ? 'lara-dark-blue' : 'lara-light-blue';
     this.isLightTheme = !isLightTheme;
     this.theme = theme;
+  }
+
+
+  onToggleSidebarEvent = output<boolean>();
+  toggleSidebar(state: boolean) {
+    this.stateToogleSidebar = !state;
+    this.onToggleSidebarEvent.emit(state);
   }
 }

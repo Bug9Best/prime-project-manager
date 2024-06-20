@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { PrimeNGModule } from '../../shared/primeng.module';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppTopbarComponent } from './app-topbar/app-topbar.component';
@@ -18,4 +18,9 @@ import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 })
 export class AppLayoutComponent {
 
+  @ViewChild(AppSidebarComponent)
+  appSidebarComponent!: AppSidebarComponent;
+  onToggleSidebar(state: boolean) {
+    this.appSidebarComponent.visible = state;
+  }
 }
