@@ -8,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TotalIssueComponent } from '../../shared/components/total-issue/total-issue.component';
 import { TotalProjectComponent } from '../../shared/components/total-project/total-project.component';
 import { RecentProjectComponent } from '../../shared/components/recent-project/recent-project.component';
-
+import { DividerModule } from 'primeng/divider';
 const routes: Routes = [
   {
     path: '',
@@ -28,7 +28,8 @@ const routes: Routes = [
     TranslateModule,
     TotalIssueComponent,
     TotalProjectComponent,
-    RecentProjectComponent
+    RecentProjectComponent,
+    DividerModule
   ]
 })
 export class DashboardModule { }
