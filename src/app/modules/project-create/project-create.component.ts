@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-create',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class ProjectCreateComponent {
 
+  template: any = -1;
+
+  constructor(
+    private router: Router,
+  ) { }
+
+  onCancel() {
+    this.router.navigate(['/home']);
+  }
+
+  onCreateProject() {
+    this.router.navigate(['/dashboard']);
+  }
 }

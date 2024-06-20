@@ -5,6 +5,8 @@ import { ProjectCreateComponent } from './project-create.component';
 import { DividerModule } from 'primeng/divider';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { PrimeNGModule } from '../../shared/primeng.module';
 
 
 
@@ -25,7 +27,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     DividerModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    RadioButtonModule,
+    PrimeNGModule
   ]
 })
 export class ProjectCreateModule { }
