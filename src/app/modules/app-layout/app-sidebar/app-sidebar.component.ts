@@ -4,6 +4,8 @@ import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/rout
 import { ConfigMenu } from '../../../config/menu';
 import { TranslateModule } from '@ngx-translate/core';
 import { AppFooterComponent } from '../app-footer/app-footer.component';
+import { DividerModule } from 'primeng/divider';
+import { PrimeNGModule } from '../../../shared/primeng.module';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,7 +15,9 @@ import { AppFooterComponent } from '../app-footer/app-footer.component';
     RouterModule,
     RouterOutlet,
     TranslateModule,
-    AppFooterComponent
+    AppFooterComponent,
+    DividerModule,
+    PrimeNGModule
   ],
   templateUrl: './app-sidebar.component.html',
   styleUrl: './app-sidebar.component.scss'
