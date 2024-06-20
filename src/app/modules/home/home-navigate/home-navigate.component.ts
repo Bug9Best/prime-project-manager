@@ -39,4 +39,9 @@ export class HomeNavigateComponent {
   onScrollToElement(element: string) {
     this.onScrollToElementEvent.emit(element);
   }
+
+  onSigninEvent = output<boolean>()
+  onSignin() {
+    this.onSigninEvent.emit(true);
+  }
 }
