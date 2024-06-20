@@ -21,7 +21,7 @@ export class HomeComponent {
 
   onSigninEvent() {
     console.log('Sign in clicked');
-    this.router.navigate(['/project-dashboard']);
+    this.router.navigate(['/project-create']);
   }
 
 }
