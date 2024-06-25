@@ -6,6 +6,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { PrimeNGModule } from '../../shared/primeng.module';
 import { ButtonModule } from 'primeng/button';
 import { TranslateModule } from '@ngx-translate/core';
+import { DividerModule } from 'primeng/divider';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -28,7 +30,9 @@ const routes: Routes = [
     PrimeNGModule,
     ButtonModule,
     CheckboxModule,
-    TranslateModule
+    TranslateModule,
+    DividerModule,
+    TableModule
   ]
   
 })

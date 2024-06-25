@@ -5,6 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { Router } from 'express';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { DividerModule } from 'primeng/divider';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 
 const routes: Routes = [
@@ -22,7 +25,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    DividerModule,
+    TranslateModule
   ]
 })
 export class ProjectMemberModule { }

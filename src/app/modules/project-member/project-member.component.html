@@ -1,39 +1,59 @@
-<p>Members</p>
-<div class="mt-2 p-4 surface-overlay border-1 surface-border border-round">
-  <div class="grid">
-    <div class="col-8">
-      <input type="text" pInputText formControlName="text" />
-    </div>
-    <div class="col">
-      <button
-        pButton
-        pRipple
-        label="Add roles"
-        class="p-button-secondary ml-6"
-      ></button>
+<div>
+  <div class="p-3 surface-overlay border-1 surface-border border-round">
+    <p>Members</p>
+    <p-divider></p-divider>
+    <div class="flex justify-content-between mt-2">
+      <div>
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input
+            type="text"
+            pInputText
+            placeholder="{{ 'SEARCH_TEXT' | translate }}"
+            class="p-inputtext-sm w-20rem"
+          />
+        </span>
+      </div>
+      <div class="flex">
+        <button
+          pButton
+          pRipple
+          label="Add roles"
+          class="p-button-secondary ml-6"
+        ></button>
         <button
           pButton
           pRipple
           label="Add members"
           class="p-button-primary ml-4"
         ></button>
+      </div>
     </div>
+    <p-divider class="mt-2"></p-divider>
 
-  </div>
-  <div class="">
-    <div class="grid ml-8 mt-3">
-        <div class="col-3 ">
-            <p>Username</p>
+    <div class="flex justify-content-between ml-2 mr-2 mt-3">
+      <div>
+        <p>Username</p>
+        <p class="text-400">Phuri siriool</p>
+        <p class="text-400">Natthaphon Ditthaviboon</p>
+      </div>
+      <div>
+        <p>Email</p>
+        <p class="text-400">kiwwithfire123gmail.com</p>
+        <p class="text-400">natbestgmail.com</p>
+      </div>
+      <div>
+        <p>Role</p>
+        <p class="text-400">Admin</p>
+        <p class="text-400">Member</p>
+      </div>
+      <div class="mr-2">
+        <p>Action</p>
+        <div class="">
+          <p class="text-400 flex justify-content-center">X</p>
+          <p class="text-400 flex justify-content-center">X</p>
         </div>
-        <div class="col-3 ">
-            <p>Email</p>
-        </div>
-        <div class="col-3 ">
-            <p>Role</p>
-        </div>
-        <div class="col-3 ">
-            <p>Action</p>
-        </div>
+      </div>
     </div>
-</div>
+  </div>
 </div>
