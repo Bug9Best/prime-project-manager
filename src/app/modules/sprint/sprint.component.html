@@ -12,5 +12,42 @@
         </span>
       </div>
     </div>
+    <p-divider></p-divider>
+    <div class="flex flex-column md:flex-row md:align-items-center">
+    <div class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+      All-sprint
+    </div>
+    <div class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+      To do
+    </div>
+    <div class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+      In progress
+    </div>
+    <div class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+      Done
+    </div>
   </div>
+  </div>
+  <div class="card mt-2">
+    <p-table [scrollable]="true" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Sprint-name</th>
+                <th>Sprint-owner</th>
+                <th>Sprint-start-date</th>
+                <th>Sprint-end-date</th>
+                <th>Progress</th>
+                <th>Current stage</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.code }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.quantity }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
 </div>
