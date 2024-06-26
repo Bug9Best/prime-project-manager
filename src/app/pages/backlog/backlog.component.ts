@@ -72,4 +72,45 @@ export class BacklogComponent {
     this.issueName = '';
     this.isCreateIssue = false;
   }
+  selectedProducts!: any;
+
+  value: any = [
+    {
+      id: 1,
+      type: 'bestJung',
+      key: '1',
+      summary: '2',
+      status: 'ON',
+      sprint: 'kiw',
+      assignee: 'daw',
+    },
+    {
+      id: 1,
+      type: 'kiwkung',
+      key: '1',
+      summary: '2',
+      status: 'ON',
+      sprint: 'kiw',
+      assignee: 'daw',
+    },
+    {
+      id: 3,
+      type: 'Gintama',
+      key: '1',
+      summary: '2',
+      status: 'ON',
+      sprint: 'kiw',
+      assignee: 'daw',
+    },
+    {
+      id: 4,
+      type: 'Orge-magi',
+      key: '1',
+      summary: '2',
+      status: 'ON',
+      sprint: 'kiw',
+      assignee: 'daw',
+    },
+  ];
+  
 }

@@ -6,6 +6,7 @@ import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { TranslateModule } from '@ngx-translate/core';
 import { DividerModule } from 'primeng/divider';
+import { TreeTableModule } from 'primeng/treetable';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
+  
   declarations: [
     ListComponent
   ],
@@ -25,7 +27,8 @@ const routes: Routes = [
     TableModule,
     InputTextModule,
     DividerModule,
-    TranslateModule
+    TranslateModule,
+    TreeTableModule
   ]
 })
 export class ListModule { }
