@@ -5,6 +5,7 @@ import { ListComponent } from './list.component';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { TranslateModule } from '@ngx-translate/core';
+import { DividerModule } from 'primeng/divider';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
     CommonModule,
     TableModule,
     InputTextModule,
+    DividerModule,
     TranslateModule
   ]
 })

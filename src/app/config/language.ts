@@ -1,6 +1,6 @@
 import { inject } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core"
-import { AppLayoutService } from "../modules/app-layout/app-layout.service";
+import { AppLayoutService } from "../pages/app-layout/app-layout.service";
 
 export class ConfigLanguage {
 

@@ -8,32 +8,27 @@ import { Component } from '@angular/core';
 export class ListComponent {
   checked: boolean = false;
 
+  selectedProducts!: any;
+
+
   value: any = [
     {
+      id: 1,
       type: 'value',
       key: '1',
       summary: '2',
       status: 'ON',
       sprint: 'kiw',
       assignee: 'daw',
-      duedate: 'daw',
-      labels: 'awd',
-      created: 'vawf',
-      updated: 'daw',
-      reporter: 'awd',
     },
     {
+      id: 2,
       type: 'value',
       key: '1',
       summary: '2',
       status: 'ON',
       sprint: 'kiw',
       assignee: 'daw',
-      duedate: 'daw',
-      labels: 'awd',
-      created: 'vawf',
-      updated: 'daw',
-      reporter: 'awd',
     }
   ];
 }
