@@ -22,11 +22,14 @@
   "MENU_TIMELINE": "ไทมไลน์",
   "TITLE_TIMELINE": "ไทมไลน์",
 
+  "MENU_LIST": "รายการ",
+  "TITLE_LIST": "รายการ",
+
   "MENU_BOARD": "กระดาน",
   "TITLE_BOARD": "กระดาน",
 
-  "MENU_LIST": "รายการ",
-  "TITLE_LIST": "รายการ",
+  "MENU_DOCUMENT": "เอกสารโครงการ",
+  "TITLE_DOCUMENT": "เอกสารโครงการ",
 
   "TITLE_CONFIG": "การตั้งค่า",
   "MENU_PROJECT_MEMBER": "สมาชิกโปรเจค",

@@ -14,6 +14,7 @@ export const routes: Routes = [
             { path: 'timeline', loadChildren: () => import('./pages/timeline/timeline.module').then(m => m.TimelineModule) },
             { path: 'board', loadChildren: () => import('./pages/board/board.module').then(m => m.BoardModule) },
             { path: 'list', loadChildren: () => import('./pages/list/list.module').then(m => m.ListModule) },
+            { path: 'project-document', loadChildren: () => import('./pages/project-document/project-document.module').then(m => m.ProjectDocumentModule) },
             { path: 'project-member', loadChildren: () => import('./pages/project-member/project-member.module').then(m => m.ProjectMemberModule) },
             { path: 'project-setting', loadChildren: () => import('./pages/project-setting/project-setting.module').then(m => m.ProjectSettingModule) },
         ]

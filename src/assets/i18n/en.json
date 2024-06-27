@@ -22,11 +22,14 @@
   "MENU_TIMELINE": "Timeline",
   "TITLE_TIMELINE": "Timeline",
 
+  "MENU_LIST": "List",
+  "TITLE_LIST": "List",
+  
   "MENU_BOARD": "Board",
   "TITLE_BOARD": "Board",
 
-  "MENU_LIST": "List",
-  "TITLE_LIST": "List",
+  "MENU_DOCUMENT": "Document",
+  "TITLE_DOCUMENT": "Document",
 
   "TITLE_CONFIG": "Configuration",
   "MENU_PROJECT_MEMBER": "Project Member",

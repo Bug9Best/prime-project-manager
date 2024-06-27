@@ -7,18 +7,15 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { PrimeNGModule } from '../../shared/primeng.module';
-
-
-
-
-
+import { AppTopbarComponent } from '../app-layout/app-topbar/app-topbar.component';
+import { AppFooterComponent } from '../app-layout/app-footer/app-footer.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProjectCreateComponent
-  }
-]
+    component: ProjectCreateComponent,
+  },
+];
 
 @NgModule({
   declarations: [ProjectCreateComponent],
@@ -29,7 +26,9 @@ const routes: Routes = [
     InputTextModule,
     ButtonModule,
     RadioButtonModule,
-    PrimeNGModule
-  ]
+    PrimeNGModule,
+    AppTopbarComponent,
+    AppFooterComponent,
+  ],
 })
-export class ProjectCreateModule { }
+export class ProjectCreateModule {}

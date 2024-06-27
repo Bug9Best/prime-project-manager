@@ -9,6 +9,8 @@ import { SectionGetstartedComponent } from './section-getstarted/section-getstar
 import { SectionFeaturesComponent } from './section-features/section-features.component';
 import { SectionDeveloperComponent } from './section-developer/section-developer.component';
 import { AppFooterComponent } from '../app-layout/app-footer/app-footer.component';
+import { SignInDialogComponent } from './sign-in-dialog/sign-in-dialog.component';
+import { SignUpDialogComponent } from './sign-up-dialog/sign-up-dialog.component';
 
 const routes: Routes = [
   {
@@ -30,7 +32,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     PrimeNGModule,
     TranslateModule,
-    AppFooterComponent
+    AppFooterComponent,
+    SignInDialogComponent,
+    SignUpDialogComponent
   ]
 })
 export class HomeModule { }

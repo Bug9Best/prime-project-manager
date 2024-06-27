@@ -17,14 +17,8 @@ export class AuthService {
   ) { }
 
 
-  LoginWithGoogle(credentials: string): Observable<any> {
-    const header = new HttpHeaders().set('Content-type', 'application/json');
-    return this.httpClient.post(this.path + "LoginWithGoogle", JSON.stringify(credentials), { headers: header, withCredentials: true });
-  }
-
-  LoginWithFacebook(credentials: string): Observable<any> {
-    const header = new HttpHeaders().set('Content-type', 'application/json');
-    return this.httpClient.post(this.path + "LoginWithFacebook", JSON.stringify(credentials), { headers: header, withCredentials: true });
+  LoginWithGoogle(): Observable<any> {
+    return this.httpClient.get('http://localhost:3000/google');
   }
 
   login(loginModel: any): Observable<any> {

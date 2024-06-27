@@ -6,10 +6,9 @@ import { AppLayoutService } from '../../app-layout/app-layout.service';
 @Component({
   selector: 'home-navigate',
   templateUrl: './home-navigate.component.html',
-  styleUrl: './home-navigate.component.scss'
+  styleUrl: './home-navigate.component.scss',
 })
 export class HomeNavigateComponent {
-
   isLightTheme: boolean = true;
   languageItems: MenuItem[] | undefined = new ConfigLanguage().ConfigLanguage;
 
@@ -17,13 +16,9 @@ export class HomeNavigateComponent {
     { id: 1, label: 'Get Started', element: 'getstarted' },
     { id: 2, label: 'Features', element: 'features' },
     { id: 3, label: 'Developers Team', element: 'team' },
-    { id: 4, label: 'About', element: 'about' },
-  ]
+  ];
 
-  constructor(
-    private appLayoutService: AppLayoutService,
-  ) {
-  }
+  constructor(private appLayoutService: AppLayoutService) {}
 
   set theme(val: string) {
     this.appLayoutService.setActiveTheme(val);
@@ -35,13 +30,18 @@ export class HomeNavigateComponent {
     this.theme = theme;
   }
 
-  onScrollToElementEvent = output<string>()
+  onScrollToElementEvent = output<string>();
   onScrollToElement(element: string) {
     this.onScrollToElementEvent.emit(element);
   }
 
-  onSigninEvent = output<boolean>()
+  onSignInEvent = output<boolean>();
   onSignin() {
-    this.onSigninEvent.emit(true);
+    this.onSignInEvent.emit(true);
+  }
+
+  onSignUpEvent = output<boolean>();
+  onSignup() {
+    this.onSignUpEvent.emit(true);
   }
 }
