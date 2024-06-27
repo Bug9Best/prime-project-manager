@@ -1,14 +1,20 @@
 <div class="p-3 surface-overlay border-1 surface-border border-round">
   <div class="surface-overlay">
-    <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
-      <span class="text-lg font-medium text-900">{{ 'MENU_LIST' | translate }}</span>
+    <div
+      class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+    >
+      <span class="text-lg font-medium text-900">{{
+        "MENU_LIST" | translate
+      }}</span>
       <div class="flex align-items-center mt-2 md:mt-0">
         <span class="p-input-icon-left">
           <i class="pi pi-search"></i>
-          <input type="text" 
-            pInputText 
-            placeholder="{{ 'SEARCH_TEXT' | translate }}" 
-            class="p-inputtext-sm w-20rem" />
+          <input
+            type="text"
+            pInputText
+            placeholder="{{ 'SEARCH_TEXT' | translate }}"
+            class="p-inputtext-sm w-20rem"
+          />
         </span>
       </div>
     </div>
@@ -16,35 +22,39 @@
 
   <p-divider></p-divider>
 
-  <p-table 
-    [value]="value" 
-    [(selection)]="selectedProducts" 
-    dataKey="id" 
-    [tableStyle]="{'min-width': '50rem'}">
-    <ng-template pTemplate="header">
+  <p-table
+    [value]="value"
+    [scrollable]="true"
+    scrollHeight="600px"
+    [(selection)]="selectedProducts"
+    dataKey="id"
+    [reorderableColumns]="true"
+    [tableStyle]="{ 'min-width': '50rem' }
+    "
+  >
+    <ng-template pTemplate="header ">
       <tr>
-        <th style="width: 40px"><p-tableHeaderCheckbox /></th>
-        <th style="width: 120px;">Type</th>
-        <th style="width: 120px;">Key</th>
-        <th>Summary</th>
-        <th style="width: 120px;">Status</th>
-        <th style="width: 120px;">Sprint</th>
-        <th style="width: 200px;">Assignee</th>
+        <th pReorderableColumn><p-tableHeaderCheckbox /></th>
+        <th class="text-center">Type</th>
+        <th class="text-center">Key</th>
+        <th class="text-center">Summary</th>
+        <th class="text-center">Status</th>
+        <th class="text-center">Sprint</th>
+        <th class="text-center">Assignee</th>
       </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-item>
-      <tr>
+    </ng-template>
+    <ng-template  pTemplate="body" let-item>
+      <tr >
         <td>
-            <p-tableCheckbox [value]="item" />
+          <p-tableCheckbox [value]="item" />
         </td>
-        <td> {{ item.type }} </td>
-        <td> {{ item.key }} </td>
-        <td> {{ item.summary }} </td>
-        <td> {{ item.status }} </td>
-        <td> {{ item.sprint }} </td>
-        <td> {{ item.assignee }} </td>
+        <td class="text-center">{{ item.type }}</td>
+        <td class="text-center">{{ item.key }}</td>
+        <td class="text-center">{{ item.summary }}</td>
+        <td class="text-center">{{ item.status }}</td>
+        <td class="text-center">{{ item.sprint }}</td>
+        <td class="text-center">{{ item.assignee }}</td>
       </tr>
     </ng-template>
   </p-table>
 </div>
-

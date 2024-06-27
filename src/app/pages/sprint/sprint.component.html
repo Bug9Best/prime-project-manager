@@ -1,53 +1,76 @@
 <div class="p-3 surface-overlay border-1 surface-border border-round">
   <div class="surface-overlay">
-    <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
-      <span class="text-2xl font-medium text-900">{{ 'MENU_SPRINT' | translate }}</span>
+    <div
+      class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+    >
+      <span class="text-2xl font-medium text-900">{{
+        "MENU_SPRINT" | translate
+      }}</span>
       <div class="flex align-items-center mt-2 md:mt-0">
         <span class="p-input-icon-left">
           <i class="pi pi-search"></i>
-          <input type="text" 
-            pInputText 
-            placeholder="{{ 'SEARCH_TEXT' | translate }}" 
-            class="p-inputtext-sm w-20rem" />
+          <input
+            type="text"
+            pInputText
+            placeholder="{{ 'SEARCH_TEXT' | translate }}"
+            class="p-inputtext-sm w-20rem"
+          />
         </span>
       </div>
     </div>
     <p-divider></p-divider>
     <div class="flex flex-column md:flex-row md:align-items-center">
-    <div class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
-      All-sprint
+      <div
+        class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+      >
+        All-sprint
+      </div>
+      <div
+        class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+      >
+        To do
+      </div>
+      <div
+        class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+      >
+        In progress
+      </div>
+      <div
+        class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+      >
+        Done
+      </div>
     </div>
-    <div class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
-      To do
-    </div>
-    <div class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
-      In progress
-    </div>
-    <div class="ml-3 flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
-      Done
-    </div>
-  </div>
   </div>
   <div class="card mt-2">
-    <p-table [scrollable]="true" [tableStyle]="{ 'min-width': '50rem' }">
-        <ng-template pTemplate="header">
-            <tr>
-                <th>Sprint-name</th>
-                <th>Sprint-owner</th>
-                <th>Sprint-start-date</th>
-                <th>Sprint-end-date</th>
-                <th>Progress</th>
-                <th>Current stage</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-product>
-            <tr>
-                <td>{{ product.code }}</td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.category }}</td>
-                <td>{{ product.quantity }}</td>
-            </tr>
-        </ng-template>
+    <p-table
+      [value]="value"
+      [(selection)]="sprintItem"
+      dataKey="id"
+      [scrollable]="true"
+      scrollHeight="600px"
+      [tableStyle]="{ 'min-width': '50rem' }"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th class="text-center">Sprint name</th>
+          <th class="text-center">Sprint owner</th>
+          <th class="text-center">Sprint start date</th>
+          <th class="text-center">Sprint end date</th>
+          <th class="text-center">Progress</th>
+          <th class="text-center">Current stage</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td class="text-center">{{ item.type }}</td>
+          <td class="text-center">{{ item.key }}</td>
+          <td class="text-center">{{ item.summary }}</td>
+          <td class="text-center">{{ item.status }}</td>
+          <td class="text-center">{{ item.sprint }}</td>
+          <td class="text-center">{{ item.assignee }}</td>
+        </tr>
+      </ng-template>
     </p-table>
-</div>
+  </div>
 </div>
