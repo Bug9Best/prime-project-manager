@@ -6,11 +6,12 @@ import { MenuModule } from 'primeng/menu';
 import { TranslateModule } from '@ngx-translate/core';
 import { AppLayoutService } from '../app-layout.service';
 import { ConfigLanguage } from '../../../config/language';
+import { AvatarModule } from 'primeng/avatar';
 
 @Component({
   selector: 'app-topbar',
   standalone: true,
-  imports: [CommonModule, MenuModule, ButtonModule, TranslateModule],
+  imports: [CommonModule, MenuModule, ButtonModule, TranslateModule, AvatarModule],
   templateUrl: './app-topbar.component.html',
   styleUrl: './app-topbar.component.scss',
 })

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PrimeNGModule } from '../../shared/primeng.module';
 import { ProjectDashboardComponent } from './project-dashboard.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     PrimeNGModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    TranslateModule
   ]
 })
 export class ProjectDashboardModule { }

@@ -1,40 +1,85 @@
 <div class="p-3 surface-overlay border-1 surface-border border-round">
-    <div class="surface-overlay">
-        <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
-            <span class="text-lg font-medium text-900">
-                {{ "MENU_DASHBOARD" | translate }}
-            </span>
-        </div>
+  <div class="surface-overlay">
+    <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
+      <span class="text-lg font-medium text-900">Project document</span>
+      <div class="flex align-items-center mt-2 md:mt-0">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input type="text" pInputText placeholder="{{ 'SEARCH_TEXT' | translate }}" class="p-inputtext-sm w-20rem" />
+        </span>
+      </div>
     </div>
-</div>
+  </div>
+  <p-divider></p-divider>
+  <div class="flex justify-content-end">
+    <p-button label="Upload-file" [raised]="true" (click)="showDialog()" />
+  </div>
+  <div class="flex-column h-screen flex align-items-center justify-content-center">
+    <div class="">
+      <i class="pi pi-info-circle mb-3 text-500" style="font-size: 3rem"></i>
+    </div>
+    <div class="text-500">No Document here</div>
+  </div>
+  <p-dialog header="Header" [(visible)]="visible" [modal]="true" [draggable]="false" [style]="{ width: '50vw' }">
+    <ng-template pTemplate="header">
+      <span class="text-xl font-bold white-space-nowrap"> Upload file </span>
+    </ng-template>
 
-<div class="mt-2 p-3 h-15rem surface-overlay border-1 surface-border border-round">
-    <div class="grid justify-content-between">
-        <div class="flex flex-wrap mt-4 text-sm">
-            <div class="border-round-xs px-2 ml-2 bg-primary-200 text-blue-400">
-                Medium
+    <div class="mt-1">
+      <div class="w-full">
+        <p-fileUpload name="myfile[]" url="https://www.primefaces.org/cdn/api/upload.php" [multiple]="true"
+          accept="image/*" maxFileSize="1000000">
+          <ng-template pTemplate="header" let-files let-chooseCallback="chooseCallback"
+            let-clearCallback="clearCallback" let-uploadCallback="uploadCallback">
+            <div class="flex flex-wrap justify-content-between align-items-center flex-1 gap-2">
+              <div class="flex gap-2"></div>
             </div>
-            <div class="border-round-xs px-2 ml-2 bg-gray-400 text-black-alpha-50">
-                Phuri siripool
-            </div>
-            <div class="border-round-xs px-2 ml-2">PPM TASK</div>
-        </div>
-        <div class="flex flex-wrap mt-4 text-sm mr-6">
-            started
-        </div>
-    </div>
-    <p-divider></p-divider>
-</div>
+          </ng-template>
+          <ng-template pTemplate="content" let-files let-uploadedFiles="uploadedFiles"
+            let-removeFileCallback="removeFileCallback" let-removeUploadedFileCallback="removeUploadedFileCallback">
+            <div *ngIf="files?.length > 0">
+              <h5>Pending</h5>
+              <div class="flex flex-wrap p-0 sm:p-5 gap-5">
+                <div *ngFor="let file of files; let i = index"
+                  class="card m-0 px-6 flex flex-column border-1 surface-border align-items-center gap-3">
+                  <div>
+                    <img role="presentation" [alt]="file.name" [src]="file.objectURL" width="100" height="50" />
+                  </div>
+                  <span class="font-semibold">{{ file.name }}</span>
 
-<div class="grid mt-2 h-auto">
-    <div class="col-12 lg:col-6">
-        <div class="p-3 surface-overlay border-1 surface-border border-round">
-            <p>Recent project</p>
-        </div>
+                  <p-button icon="pi pi-times" ƒ [outlined]="true" [rounded]="true" severity="danger" />
+                </div>
+              </div>
+            </div>
+            <div *ngIf="uploadedFiles?.length > 0">
+              <h5>Completed</h5>
+              <div class="flex flex-wrap p-0 sm:p-5 gap-5">
+                <div *ngFor="let file of uploadedFiles; let i = index"
+                  class="card m-0 px-6 flex flex-column border-1 surface-border align-items-center gap-3">
+                  <div>
+                    <img role="presentation" [alt]="file.name" [src]="file.objectURL" width="100" height="50" />
+                  </div>
+                  <span class="font-semibold">{{ file.name }}</span>
+
+                  <p-button icon="pi pi-times" [outlined]="true" [rounded]="true" severity="danger" />
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="file"> </ng-template>
+          <ng-template pTemplate="empty">
+            <div class="flex align-items-center justify-content-center flex-column">
+              <i class="pi pi-cloud-upload border-2 border-circle p-5 text-8xl text-400 border-400"></i>
+              <p class="mt-4 mb-0">Drag and drop files to here to upload.</p>
+            </div>
+          </ng-template>
+        </p-fileUpload>
+      </div>
     </div>
-    <div class="col-12 lg:col-6">
-        <div class="p-3 surface-overlay border-1 surface-border border-round h-12rem">
-            <p>Recent space</p>
-        </div>
-    </div>
+
+    <ng-template pTemplate="footer">
+      <p-button class="mr-2" label="Cancel" [text]="true" severity="primary" (click)="visible = false" size="small" />
+      <p-button label="Completed" icon="pi pi-save" severity="primary" size="small" />
+    </ng-template>
+  </p-dialog>
 </div>
