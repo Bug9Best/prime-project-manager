@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Inject, NgModule, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { PrimeNGModule } from '../../shared/primeng.module';
@@ -9,7 +9,6 @@ import { TotalIssueComponent } from '../../shared/components/total-issue/total-i
 import { TotalProjectComponent } from '../../shared/components/total-project/total-project.component';
 import { RecentProjectComponent } from '../../shared/components/recent-project/recent-project.component';
 import { DividerModule } from 'primeng/divider';
-import { NgxGanttModule } from '@worktile/gantt';
 
 const routes: Routes = [
   {
@@ -32,7 +31,6 @@ const routes: Routes = [
     TotalProjectComponent,
     RecentProjectComponent,
     DividerModule,
-    NgxGanttModule
-  ]
+  ],
 })
 export class DashboardModule { }
