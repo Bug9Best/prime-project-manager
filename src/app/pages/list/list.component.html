@@ -8,7 +8,7 @@
       }}</span>
       <div class="flex align-items-center mt-2 md:mt-0">
         <span class="p-input-icon-left">
-          <i class="pi pi-search"></i>
+          <i class="pi pi-search" icon="pi "></i>
           <input
             type="text"
             pInputText
@@ -29,22 +29,21 @@
     [(selection)]="selectedProducts"
     dataKey="id"
     [reorderableColumns]="true"
-    [tableStyle]="{ 'min-width': '50rem' }
-    "
+    [tableStyle]="{ 'min-width': '50rem' }"
   >
     <ng-template pTemplate="header">
       <tr>
-        <th ><p-tableHeaderCheckbox /></th>
+        <th><p-tableHeaderCheckbox /></th>
         <th class="text-center">Type</th>
-        <th class="text-center">Key</th>
-        <th class="text-center">Summary</th>
-        <th class="text-center">Status</th>
-        <th class="text-center">Sprint</th>
-        <th class="text-center">Assignee</th>
+        <th class="text-center">Key <span class="pi pi-key text-xs"></span></th>
+        <th class="text-center">Summary <span class="pi pi-align-justify text-xs"></span></th>
+        <th class="text-center">Status <span class="pi pi-list-check text-xs"></span></th>
+        <th class="text-center">Sprint </th>
+        <th class="text-center">Assignee<span class="pi pi-address-book text-sm ml-1"></span></th>
       </tr>
     </ng-template>
-    <ng-template  pTemplate="body" let-item>
-      <tr >
+    <ng-template pTemplate="body" let-item>
+      <tr class="text-400">
         <td>
           <p-tableCheckbox [value]="item" />
         </td>
