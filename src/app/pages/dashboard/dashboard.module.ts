@@ -9,6 +9,8 @@ import { TotalIssueComponent } from '../../shared/components/total-issue/total-i
 import { TotalProjectComponent } from '../../shared/components/total-project/total-project.component';
 import { RecentProjectComponent } from '../../shared/components/recent-project/recent-project.component';
 import { DividerModule } from 'primeng/divider';
+import { NgxGanttModule } from '@worktile/gantt';
+
 const routes: Routes = [
   {
     path: '',
@@ -29,7 +31,8 @@ const routes: Routes = [
     TotalIssueComponent,
     TotalProjectComponent,
     RecentProjectComponent,
-    DividerModule
+    DividerModule,
+    NgxGanttModule
   ]
 })
 export class DashboardModule { }

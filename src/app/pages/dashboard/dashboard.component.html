@@ -1,50 +1,31 @@
-<div class="p-3 surface-overlay border-1 surface-border border-round">
-  <div class="surface-overlay">
-    <div
-      class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
-    >
-      <span class="text-lg font-medium text-900">
-        {{ "MENU_DASHBOARD" | translate }}
-      </span>
-    </div>
-  </div>
-</div>
+<ngx-gantt #gantt 
+  [items]="items" 
+  [baselineItems]="baselineItems"
+  [viewType]="viewType"
+  [draggable]="true"
+  [linkable]="true"
+  [selectable]="true"
+  [multiple]="true"
+  [viewOptions]="viewOptions"
+  [showToolbar]="isShowToolbarChecked"
+  [toolbarOptions]="toolbarOptions"
+  [loading]="loading"
+  [virtualScrollEnabled]="false"
+  (viewChange)="viewChange($event)"
+  (dragEnded)="dragEnded($event)"
+  (selectedChange)="selectedChange($event)"
+  (linkDragEnded)="linkDragEnded($event)"
+  [viewOptions]="viewOptions">
+  <ngx-gantt-table
+    [draggable]="true"
+    [dropEnterPredicate]="dropEnterPredicate"
+    (dragDropped)="onDragDropped($event)"
+    (dragStarted)="onDragStarted($event)"
+    (dragEnded)="onDragEnded($event)">
+    <ngx-gantt-column name="标题" width="300px">
+      <ng-template #cell let-item="item"> {{ item.title }} </ng-template>
+    </ngx-gantt-column>
+  </ngx-gantt-table>
+</ngx-gantt>
 
-<div
-  class="mt-2 p-3 h-15rem surface-overlay border-1 surface-border border-round"
->
-  <assign-me></assign-me>
-  <total-issue></total-issue>
-  <div class="grid justify-content-between">
-    <div class="flex flex-wrap mt-4 text-sm">
-      <div class="border-round-xs px-2 ml-2 bg-primary-200 text-blue-400">
-        Medium
-      </div>
-      <div class="border-round-xs px-2 ml-2 bg-gray-400 text-black-alpha-50">
-        Phuri siripool
-      </div>
-      <div class="border-round-xs px-2 ml-2">PPM TASK</div>
-    </div>
-    <div class="flex flex-wrap mt-4 text-sm mr-6">
-      started
-    </div>
-  </div>
-  <p-divider></p-divider>
-</div>
 
-<div class="grid mt-2 h-auto">
-  <div class="col-12 lg:col-6">
-    <div class="p-3 surface-overlay border-1 surface-border border-round">
-      <p>Recent project</p>
-      <total-project></total-project>
-      <recent-project></recent-project>
-    </div>
-  </div>
-  <div class="col-12 lg:col-6">
-    <div
-      class="p-3 surface-overlay border-1 surface-border border-round h-12rem"
-    >
-      <p>Recent space</p>
-    </div>
-  </div>
-</div>
