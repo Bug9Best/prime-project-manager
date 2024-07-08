@@ -7,9 +7,10 @@ import { AssignMeComponent } from '../../shared/components/assign-me/assign-me.c
 import { TranslateModule } from '@ngx-translate/core';
 import { TotalIssueComponent } from '../../shared/components/total-issue/total-issue.component';
 import { TotalProjectComponent } from '../../shared/components/total-project/total-project.component';
-import { RecentProjectComponent } from '../../shared/components/recent-project/recent-project.component';
+import { RecentProjectComponent } from '../../modules/recent-project/recent-project.component';
 import { DividerModule } from 'primeng/divider';
 import { NgxGanttModule } from '@worktile/gantt';
+import { GridsterComponent, GridsterItemComponent } from 'angular-gridster2';
 
 const routes: Routes = [
   {
@@ -26,13 +27,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     PrimeNGModule,
-    AssignMeComponent,
-    TranslateModule,
-    TotalIssueComponent,
-    TotalProjectComponent,
-    RecentProjectComponent,
-    DividerModule,
-    NgxGanttModule
+    GridsterComponent, 
+    GridsterItemComponent
   ]
 })
 export class DashboardModule { }

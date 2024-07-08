@@ -16,17 +16,17 @@
       [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header">
         <tr>
-          <th class="text-center">Sprint name </th>
-          <th class="text-center">Sprint owner<span class="pi pi-users text-sm ml-1"></span></th>
-          <th class="text-center">Sprint start date<span class="pi pi-calendar-plus text-sm ml-1"></span></th>
-          <th class="text-center">Sprint end date<span class="pi pi-calendar-clock text-sm ml-1"></span></th>
-          <th class="text-center">Progress<span class="pi pi-chart-line text-sm ml-1"></span></th>
-          <th class="text-center">Current stage<span class="pi text-sm ml-1"></span></th>
+          <th class="text-center">Sprint name</th>
+          <th class="text-center"><span class="pi pi-users text-sm mr-1"></span>Sprint owner</th>
+          <th class="text-center"><span class="pi pi-calendar-plus text-sm mr-1"></span>Sprint start date</th>
+          <th class="text-center"><span class="pi pi-calendar-clock text-sm mr-1"></span>Sprint end date</th>
+          <th class="text-center"><span class="pi pi-chart-line text-sm mr-1"></span>Progress</th>
+          <th class="text-center"><span class="pi text-sm mr-1"></span>Current stage</th>
 
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-item>
-        <tr>
+        <tr class="text-400">
           <td class="text-center">{{ item.type }}</td>
           <td class="text-center">{{ item.key }}</td>
           <td class="text-center">{{ item.summary }}</td>
