@@ -2,8 +2,8 @@
   <app-topbar [isShowToggleSidebar]="false">
   </app-topbar>
 
-  <div class="container flex align-items-center justify-content-center surface-ground">
-    <div class="">
+  <div class="flex align-items-center justify-content-center surface-ground">
+    <div class="container p-5">
       <div class="surface-card p-4 shadow-2 border-round w-full">
         <div>
           <div class="flex justify-content-between">
@@ -27,9 +27,8 @@
             <div class="col-12">
               <div class="shadow-2 surface-card p-4 border-2 border-transparent cursor-pointer"
                 style="border-radius: 10px" [ngClass]="{
-                'border-blue-500': template === 0,
-                'hover:border-blue-200': template !== 0
-              }" (click)="template = 0">
+                'border-orange-500': template === 0,
+                'hover:border-orange-200': template !== 0 }" (click)="template = 0">
                 <div class="flex align-items-center">
                   <div class="mr-3">
                     <span class="inline-flex justify-content-center align-items-center bg-orange-100"
@@ -48,17 +47,41 @@
                 </div>
               </div>
             </div>
+
             <div class="col-12">
               <div class="shadow-2 surface-card p-4 border-2 border-transparent cursor-pointer"
                 style="border-radius: 10px" [ngClass]="{
                 'border-blue-500': template === 1,
-                'hover:border-blue-200': template !== 1
-              }" (click)="template = 1">
+                'hover:border-blue-200': template !== 1 }" (click)="template = 1">
                 <div class="flex align-items-center">
                   <div class="mr-3">
                     <span class="inline-flex justify-content-center align-items-center bg-blue-100"
                       style="border-radius: 4px; width: 45px; height: 45px">
-                      <i class="pi pi-clipboard text-2xl text-blue-600"></i>
+                      <i class="pi pi-align-left text-2xl text-blue-600"></i>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="text-900 text-xl mb-2 font-medium">Waterfall Project</span>
+                    <p class="m-0 text-600 font-medium text-sm">
+                      Visualize and advance your project forward using issues on a
+                      powerful board.
+                    </p>
+                  </div>
+                  <p-radioButton name="template" [value]="1" [(ngModel)]="template" class="ml-auto"></p-radioButton>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="shadow-2 surface-card p-4 border-2 border-transparent cursor-pointer"
+                style="border-radius: 10px" [ngClass]="{
+                'border-green-500': template === 2,
+                'hover:border-green-200': template !== 2 }" (click)="template = 2">
+                <div class="flex align-items-center">
+                  <div class="mr-3">
+                    <span class="inline-flex justify-content-center align-items-center bg-green-100"
+                      style="border-radius: 4px; width: 45px; height: 45px">
+                      <i class="pi pi-clipboard text-2xl text-green-600"></i>
                     </span>
                   </div>
                   <div>
@@ -68,10 +91,12 @@
                       timeline.
                     </p>
                   </div>
-                  <p-radioButton name="template" [value]="1" [(ngModel)]="template" class="ml-auto"></p-radioButton>
+                  <p-radioButton name="template" [value]="2" [(ngModel)]="template" class="ml-auto"></p-radioButton>
                 </div>
               </div>
             </div>
+
+
           </div>
 
           <p-divider></p-divider>
