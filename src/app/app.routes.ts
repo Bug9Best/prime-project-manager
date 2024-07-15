@@ -9,6 +9,8 @@ export const routes: Routes = [
         children: [
             { path: '', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
             { path: 'dashboard', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
+            { path: 'gantt-chart', loadChildren: () => import('./pages/gantt-chart/gantt-chart.module').then(m => m.GanttChartModule) },
+            { path: 'work-break-down', loadChildren: () => import('./pages/work-break-down/work-break-down.module').then(m => m.WorkBreakDownModule) },
             { path: 'sprint', loadChildren: () => import('./pages/sprint/sprint.module').then(m => m.SprintModule) },
             { path: 'backlog', loadChildren: () => import('./pages/backlog/backlog.module').then(m => m.BacklogModule) },
             { path: 'timeline', loadChildren: () => import('./pages/timeline/timeline.module').then(m => m.TimelineModule) },

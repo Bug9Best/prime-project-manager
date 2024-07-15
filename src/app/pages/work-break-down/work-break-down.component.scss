@@ -1,0 +1,12 @@
+:host ::ng-deep .p-organizationchart .p-organizationchart-node-content {
+    background-color: #d0e1fd;
+    border-radius: 8px;
+}
+
+:host ::ng-deep .p-organizationchart .p-organizationchart-node-content .p-node-toggler {
+    background: none;
+
+    .p-node-toggler-icon {
+        display: none;
+    }
+}

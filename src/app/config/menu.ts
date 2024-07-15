@@ -5,6 +5,8 @@ export var ConfigMenu = [
         expanded: true,
         items: [
             { label: 'MENU_DASHBOARD', icon: 'pi-th-large', routerLink: ['/dashboard'] },
+            { label: 'MENU_GANTT', icon: 'pi-calendar-clock', routerLink: ['/gantt-chart'] },
+            { label: 'MENU_WORK_BREAK_DOWN', icon: 'pi-sitemap', routerLink: ['/work-break-down'] },
             { label: 'MENU_SPRINT', icon: 'pi-spinner', routerLink: ['/sprint'] },
             { label: 'MENU_BACKLOG', icon: 'pi-align-left', routerLink: ['/backlog'] },
             { label: 'MENU_LIST', icon: 'pi-list-check', routerLink: ['/list'] },

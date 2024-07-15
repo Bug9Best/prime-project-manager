@@ -6,6 +6,12 @@
   "MENU_DASHBOARD": "Dashboard",
   "TITLE_DASHBOARD": "Dashboard",
 
+  "MENU_GANTT": "Gantt Chart",
+  "TITLE_GANTT": "Gantt Chart",
+
+  "MENU_WORK_BREAK_DOWN": "Work Break Down",
+  "TITLE_WORK_BREAK_DOWN": "Work Break Down",
+
   "MENU_SPRINT": "Sprint",
   "TITLE_SPRINT": "Sprint",
 
@@ -53,5 +59,7 @@
   "DEVELOPER_NATTHAPHON": "Mr. Natthaphon Ditthaviboon",
   "DEVELOPER_NATTHAPHON_POSITION": "Software Developer",
   "DEVELOPER_PHURI": "Mr. Phuri Siripool",
-  "DEVELOPER_PHURI_POSITION": "Software Developer"
+  "DEVELOPER_PHURI_POSITION": "Software Developer",
+
+  "TITLE_GANTT_CHART": "Task Title"
 }

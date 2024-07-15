@@ -1,9 +1,12 @@
-import { inject } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core"
 import { AppLayoutService } from "../pages/app-layout/app-layout.service";
+import { Locale, enUS, th } from 'date-fns/locale';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class ConfigLanguage {
-
   ConfigLanguage = [
     {
       items: [

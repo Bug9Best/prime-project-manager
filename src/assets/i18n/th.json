@@ -6,6 +6,12 @@
   "MENU_DASHBOARD": "แดชบอร์ด",
   "TITLE_DASHBOARD": "แดชบอร์ด",
 
+  "MENU_GANTT": "แผนภูมิแกรนต์",
+  "TITLE_GANTT": "แผนภูมิแกรนต์",
+
+  "MENU_WORK_BREAK_DOWN": "แบ่งงาน",
+  "TITLE_WORK_BREAK_DOWN": "แบ่งงาน",
+
   "MENU_SPRINT": "สปรินต์",
   "TITLE_SPRINT": "สปรินต์",
 
@@ -53,5 +59,7 @@
   "DEVELOPER_NATTHAPHON": "นายณัฐพล ดิษฐวิบูลย์",
   "DEVELOPER_NATTHAPHON_POSITION": "นักพัฒนาซอฟต์แวร์",
   "DEVELOPER_PHURI": "นายภูริ ศิริภูล",
-  "DEVELOPER_PHURI_POSITION": "นักพัฒนาซอฟต์แวร์"
+  "DEVELOPER_PHURI_POSITION": "นักพัฒนาซอฟต์แวร์",
+
+  "TITLE_GANTT_CHART": "ชื่อรายการ"
 }
