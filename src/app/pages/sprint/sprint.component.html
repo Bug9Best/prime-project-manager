@@ -16,23 +16,21 @@
       [tableStyle]="{ 'min-width': '50rem' }">
       <ng-template pTemplate="header">
         <tr>
-          <th class="text-center">Sprint name</th>
-          <th class="text-center"><span class="pi pi-users text-sm mr-1"></span>Sprint owner</th>
-          <th class="text-center"><span class="pi pi-calendar-plus text-sm mr-1"></span>Sprint start date</th>
-          <th class="text-center"><span class="pi pi-calendar-clock text-sm mr-1"></span>Sprint end date</th>
-          <th class="text-center"><span class="pi pi-chart-line text-sm mr-1"></span>Progress</th>
-          <th class="text-center"><span class="pi text-sm mr-1"></span>Current stage</th>
+          <th>Sprint name</th>
+          <th>Sprint owner</th>
+          <th>Sprint start date</th>
+          <th style="width: 250px;">Progress</th>
 
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-item>
-        <tr class="text-400">
-          <td class="text-center">{{ item.type }}</td>
-          <td class="text-center">{{ item.key }}</td>
-          <td class="text-center">{{ item.summary }}</td>
-          <td class="text-center">{{ item.status }}</td>
-          <td class="text-center">{{ item.sprint }}</td>
-          <td class="text-center">{{ item.assignee }}</td>
+        <tr>
+          <td>{{ item.sprint_name }}</td>
+          <td>{{ item.sprint_owner }}</td>
+          <td>{{ item.duration }} (หกวัน)</td>
+          <td>
+            <p-progressBar [value]="item.progress" />
+          </td>
         </tr>
       </ng-template>
     </p-table>
