@@ -18,7 +18,7 @@
         <tr>
           <th>Sprint name</th>
           <th>Sprint owner</th>
-          <th>Sprint start date</th>
+          <th class="text-center"> Sprint start date</th>
           <th style="width: 250px;">Progress</th>
 
         </tr>
@@ -27,7 +27,12 @@
         <tr>
           <td>{{ item.sprint_name }}</td>
           <td>{{ item.sprint_owner }}</td>
-          <td>{{ item.duration }} (หกวัน)</td>
+          <td class="text-center">
+            <div class="font-bold">(หกวัน)</div>
+            <div class="text-500">
+              {{ item.duration }}
+            </div>
+          </td>
           <td>
             <p-progressBar [value]="item.progress" />
           </td>
