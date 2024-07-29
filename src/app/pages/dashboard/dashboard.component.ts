@@ -32,6 +32,9 @@ import {
   CompactType,
   DisplayGrid,
 } from 'angular-gridster2';
+import { AssignMeComponent } from '../../shared/components/assign-me/assign-me.component';
+import { TotalIssueComponent } from '../../shared/components/total-issue/total-issue.component';
+import { TotalProjectComponent } from '../../shared/components/total-project/total-project.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -110,9 +113,9 @@ export class DashboardComponent implements OnInit {
     };
 
     this.dashboard = [
-      { cols: 2, rows: 1, y: 0, x: 2 },
-      { cols: 2, rows: 1, y: 0, x: 2},
-      { cols: 4, rows: 1, y: 0, x: 0 },
+      { cols: 2, rows: 1, y: 0, x: 0, component: AssignMeComponent },
+      { cols: 2, rows: 1, y: 0, x: 2, component: TotalIssueComponent },
+      { cols: 4, rows: 1, y: 1, x: 0, component: TotalProjectComponent },
     ];
   }
 

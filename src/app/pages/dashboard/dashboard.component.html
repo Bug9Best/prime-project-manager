@@ -5,6 +5,8 @@
   <gridster-item 
     [item]="item" 
     class="bg-white shadow-2 border-round">
+    <ng-container *ngComponentOutlet="item['component']">
+    </ng-container>
   </gridster-item>
   }
 </gridster>
