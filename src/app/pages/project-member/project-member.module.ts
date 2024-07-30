@@ -7,6 +7,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
 import { TranslateModule } from '@ngx-translate/core';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { DropdownModule } from 'primeng/dropdown';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -27,7 +30,10 @@ const routes: Routes = [
     InputTextModule,
     ButtonModule,
     DividerModule,
-    TranslateModule
+    TranslateModule,
+    SplitButtonModule,
+    DropdownModule,
+    TableModule
   ]
 })
 export class ProjectMemberModule { }
