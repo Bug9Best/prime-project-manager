@@ -7,6 +7,14 @@
           <i class="pi pi-search"></i>
           <input type="text" pInputText placeholder="{{ 'SEARCH_TEXT' | translate }}" class="p-inputtext-sm w-20rem" />
         </span>
+        <span>
+          <p-button 
+            icon="pi pi-plus" 
+            label="Create Issue" 
+            size="small" 
+            class="ml-2"
+            (onClick)="isOnCreateSprint = true"></p-button>
+        </span>
       </div>
     </div>
     <p-divider></p-divider>
@@ -28,9 +36,9 @@
           <td>{{ item.sprint_name }}</td>
           <td>{{ item.sprint_owner }}</td>
           <td class="text-center">
-            <div class="font-bold">(หกวัน)</div>
+            <div class="font-bold">{{getTotalDate(item.start_date,item.end_date)}}</div>
             <div class="text-500">
-              {{ item.duration }}
+              {{ item.start_date | date:'dd/MM/yyyy' }} - {{ item.end_date | date:'dd/MM/yyyy' }}
             </div>
           </td>
           <td>
@@ -41,3 +49,55 @@
     </p-table>
   </div>
 </div>
+
+
+<p-dialog 
+  header="Create Sprint"
+  [(visible)]="isOnCreateSprint" 
+  [modal]="true"
+  [style]="{'min-width': '50vw'}"
+  styleClass="p-3">
+  <span class="p-text-secondary block mb-5">
+    Create a new sprint
+  </span>
+  <div [formGroup]="formGroup">
+    <div class="grid">
+      <div class="col-3">
+        <label for="sprint_name" class="font-semibold w-6rem">Sprint Name</label>
+      </div>
+      <div class="col-9">
+        <input type="text" pInputText class="p-inputtext-sm w-full" formControlName="sprint_name">
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col-3">
+        <label for="username" class="font-semibold w-6rem">Start Date</label>
+      </div>
+      <div class="col-9">
+        <p-calendar 
+          appendTo="body"
+          formControlName="start_date"
+          styleClass="w-full">
+        </p-calendar>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col-3">
+        <label for="username" class="font-semibold w-6rem">End Date</label>
+      </div>
+      <div class="col-9">
+        <p-calendar 
+          appendTo="body"
+          formControlName="end_date"
+          styleClass="w-full">
+        </p-calendar>
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <p-button label="Cancel" severity="secondary" size="small" [text]="true" (onClick)="isOnCreateSprint = false" />
+    <p-button icon="pi pi-save" label="Save" size="small" (onClick)="onCreateSprint()" />
+  </p-footer>
+</p-dialog>

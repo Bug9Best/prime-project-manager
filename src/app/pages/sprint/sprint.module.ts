@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import { TranslateModule } from '@ngx-translate/core';
 import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +27,8 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     PrimeNGModule,
     ButtonModule,
