@@ -5,6 +5,7 @@ import { BoardComponent } from './board.component';
 import { PrimeNGModule } from '../../shared/primeng.module';
 import { BoardControlComponent } from './board-control/board-control.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -20,6 +21,8 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     PrimeNGModule,
     TranslateModule

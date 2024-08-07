@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MockBoard, KanbanBoard, KanbanBoardItem } from '../../shared/data/board';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-board',
@@ -7,11 +8,17 @@ import { MockBoard, KanbanBoard, KanbanBoardItem } from '../../shared/data/board
   styleUrl: './board.component.scss'
 })
 export class BoardComponent {
+
+  isOnAddBoard = false;
   private mockBoard = new MockBoard();
 
   listBoard: KanbanBoard[] = this.mockBoard.board;
   sourceBoard: KanbanBoard | undefined;
   draggedItem: KanbanBoardItem | undefined;
+
+  formGroup: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required)
+  });
 
   resetValues() {
     this.draggedItem = undefined;
@@ -38,5 +45,19 @@ export class BoardComponent {
 
       this.mockBoard.saveBoard();
     }
+  }
+
+  closeDialog() {
+    this.formGroup.reset();
+    this.isOnAddBoard = false;
+  }
+
+  onAddBoard() {
+    this.listBoard.push({
+      id: this.listBoard.length + 1,
+      name: this.formGroup.get('name')?.value,
+      items: []
+    } as KanbanBoard);
+    this.closeDialog();
   }
 }
