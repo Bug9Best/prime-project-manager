@@ -118,7 +118,6 @@ export class DashboardComponent implements OnInit {
       { cols: 2, rows: 1, y: 0, x: 2, component: TotalProjectComponent },
       { cols: 4, rows: 1, y: 1, x: 0, component: AssignMeComponent },
     ];
-    console.log(this.options);
   }
 
   changedOptions(): void {
