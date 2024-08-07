@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
+import { PrimeNGModule } from '../../shared/primeng.module';
 
 
 
@@ -33,7 +34,8 @@ const routes: Routes = [
     TranslateModule,
     SplitButtonModule,
     DropdownModule,
-    TableModule
+    TableModule,
+    PrimeNGModule
   ]
 })
 export class ProjectMemberModule { }
