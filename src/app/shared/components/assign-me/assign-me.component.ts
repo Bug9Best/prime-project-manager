@@ -4,11 +4,12 @@ import { ChartModule } from 'primeng/chart';
 import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
+import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'assign-me',
   standalone: true,
-  imports: [ButtonModule, TableModule, TagModule, DividerModule, ChartModule],
+  imports: [ButtonModule, TableModule, TagModule, DividerModule, ChartModule, TooltipModule],
   templateUrl: './assign-me.component.html',
   styleUrl: './assign-me.component.scss',
 })
