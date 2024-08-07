@@ -9,6 +9,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 export class ProjectMemberComponent {
 
   isAddMember: boolean = false;
+  isAddPosition: boolean = false;
 
   memberItem!: any;
   value: any = [
@@ -24,6 +25,13 @@ export class ProjectMemberComponent {
       email: 'natbestgmail.com',
       position: "-",
     },
+  ];
+
+  positions: any = [
+    { label: 'Project Manager', value: 'Project Manager' },
+    { label: 'Developer', value: 'Developer' },
+    { label: 'Designer', value: 'Designer' },
+    { label: 'Tester', value: 'Tester' },
   ];
 
   constructor(
