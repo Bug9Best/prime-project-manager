@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './project-document.component.scss',
 })
 export class ProjectDocumentComponent {
-  visible: boolean = false;
+  isAddResource: boolean = false;
 
   showDialog() {
-    this.visible = true;
+    this.isAddResource = true;
   }
 }
