@@ -1,20 +1,18 @@
 <div class="p-3 ml-2 surface-overlay border-1 surface-border border-round">
   <div class="w-full flex justify-content-between align-items-center">
     <div class="surface-overlay">
-      <div
-        class="flex flex-column flex md:flex-row md:justify-content-between md:align-items-center"
-      >
+      <div class="flex flex-column flex md:flex-row md:justify-content-between md:align-items-center">
         <span class="text-lg font-medium text-900">Dashboard</span>
       </div>
     </div>
-    <div class="align-items-center mt-2 md:mt-0">
+    <div class="align-items-center">
       <button
         pButton
         pRipple
-        icon="pi pi-pencil"
-        class="p-button-primary p-button-sm text-xs"
-        [outlined]="true"
-        [rounded]="true"
+        [icon]="isEdit ? 'pi pi-save' :'pi pi-pencil'"
+        [label]="isEdit ? 'Save Change' :'Edit Dashboard'"
+        [class]="isEdit ? 'p-button-success p-button-sm text-xs': 'p-button-primary p-button-sm text-xs p-button-outlined'"
+        (click)="toggleEdit()"
       ></button>
     </div>
   </div>
