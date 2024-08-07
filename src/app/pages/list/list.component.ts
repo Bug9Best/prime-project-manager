@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { TreeTableModule } from 'primeng/treetable';
 
 @Component({
@@ -10,10 +11,18 @@ import { TreeTableModule } from 'primeng/treetable';
 
 })
 export class ListComponent {
+  isOnCreateIssue: boolean = false;
 
   checked: boolean = false;
 
   selectedProducts!: any;
+
+  formGroup: FormGroup = new FormGroup({
+    summary: new FormControl('', Validators.required),
+    type: new FormControl('', Validators.required),
+    sprint: new FormControl('', Validators.required),
+    assignee: new FormControl('', Validators.required)
+  });
 
   options: any = [
     { label: 'Sprint 1', value: 'Sprint 1' },
@@ -195,4 +204,24 @@ export class ListComponent {
       assignee: ''
     }
   ];
+
+  optionsType: any = [
+    { label: 'Task', value: 'Task' },
+    { label: 'Bug', value: 'Bug' }
+  ];
+
+  optionsStatus: any = [
+    { label: 'Todo', value: 'Todo' },
+    { label: 'Done', value: 'Done' },
+    { label: 'In Progress', value: 'In Progress' }
+  ];
+
+  onCloseDialog() {
+    this.formGroup.reset();
+    this.isOnCreateIssue = false;
+  }
+
+  onCreateIssue() {
+    this.onCloseDialog();
+  }
 }

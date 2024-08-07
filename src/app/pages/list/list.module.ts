@@ -8,6 +8,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { Divider, DividerModule } from 'primeng/divider';
 import { TreeTableModule } from 'primeng/treetable';
 import { DropdownModule } from 'primeng/dropdown';
+import { PrimeNGModule } from '../../shared/primeng.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -24,13 +26,16 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     TableModule,
     InputTextModule,
     DropdownModule,
     DividerModule,
     TranslateModule,
-    TreeTableModule
+    TreeTableModule,
+    PrimeNGModule
   ]
 })
 export class ListModule { }
