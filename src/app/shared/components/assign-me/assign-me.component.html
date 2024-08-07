@@ -1,31 +1,123 @@
-<div class="flex justify-content-between">
-    <p class="ml-3">assign-me works!</p>
-    <p-button class="mr-3 mt-2" label="Edit" />
-</div>
-<div class="card mt-2">
-    <p-table
-      [value]="value"
-      [(selection)]="memberItem"
-      dataKey="id"
-      [scrollable]="true"
-      scrollHeight="600px"
-      [tableStyle]="{ 'min-width': '50rem' }"
-    >
-      <ng-template pTemplate="header">
-        <tr>
-          <th>Project</th>
-          <th>Lead</th>
-          <th class="text-center">Action</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-item>
-        <tr class="align-items-center">
-          <td>{{ item.name }}</td>
-          <td>{{ item.roles }}</td>
-          <td class="text-center">
-            <p class="text-400 hover:text-red-500 cursor-pointer">X</p>
-          </td>
-        </tr>
-      </ng-template>
-    </p-table>
+<div class="flex align-items-center justify-content-between">
+  <div class="ml-4">
+    <p class="font-bold">Assigned to me</p>
+    
   </div>
+  <p class="mr-4 text-400">Total issue : 4</p>
+</div>
+<div class="overflow-scroll h-16rem">
+  <div class="flex justify-content-between">
+    <div class="ml-2 flex flex-row">
+      <div class="flex justify-content-between">
+        <div class="flex align-items-center justify-content-center ml-2 mt-4">
+          <p-tag
+            icon="pi pi-user"
+            class="ml-2"
+            severity="secondary"
+            value="Phuri siripool"
+          />
+          <p-tag class="ml-2" severity="danger" value="High" />
+          <p-tag class="ml-2" severity="info" value="Sprint-1" />
+          <p-tag
+            icon="pi pi-microchip"
+            class="ml-2"
+            severity="danger"
+            value="Bug"
+          />
+          <span class="ml-4">Taskname kiw</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 mr-4">
+      <p-tag severity="warning" value="Not started" [rounded]="true" />
+    </div>
+  </div>
+  <div class="m-4">
+    <p-divider type="solid" />
+  </div>
+  <div class="flex justify-content-between">
+    <div class="ml-2 flex flex-row">
+      <div class="flex justify-content-between">
+        <div class="flex align-items-center justify-content-center ml-2">
+          <p-tag
+            icon="pi pi-user"
+            class="ml-2"
+            severity="secondary"
+            value="Nat d. Best"
+          />
+          <p-tag class="ml-2" severity="success" value="Low" />
+          <p-tag class="ml-2" severity="info" value="Sprint-2" />
+          <p-tag
+            icon="pi pi-lightbulb"
+            class="ml-2"
+            severity="success"
+            value="Requirement"
+          />
+          <span class="ml-4">Taskname NAT</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 mr-4">
+      <p-tag severity="warning" value="Not started" [rounded]="true" />
+    </div>
+  </div>
+  <div class="m-4">
+    <p-divider type="solid" />
+  </div>
+  <div class="flex justify-content-between">
+    <div class="ml-2 flex flex-row">
+      <div class="flex justify-content-between">
+        <div class="flex align-items-center justify-content-center ml-2">
+          <p-tag
+            icon="pi pi-user"
+            class="ml-2"
+            severity="secondary"
+            value="Nat d. Best"
+          />
+          <p-tag class="ml-2" severity="success" value="Low" />
+          <p-tag class="ml-2" severity="info" value="Sprint-3" />
+          <p-tag
+            icon="pi pi-lightbulb"
+            class="ml-2"
+            severity="success"
+            value="Requirement"
+          />
+          <span class="ml-4">Taskname NAT-3</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 mr-4">
+      <p-tag severity="warning" value="Not started" [rounded]="true" />
+    </div>
+  </div>
+  <div class="m-4">
+    <p-divider type="solid" />
+  </div>
+  <div class="flex justify-content-between">
+    <div class="ml-2 flex flex-row">
+      <div class="flex justify-content-between">
+        <div class="flex align-items-center justify-content-center ml-2">
+          <p-tag
+            icon="pi pi-user"
+            class="ml-2"
+            severity="secondary"
+            value="Nat d. Best"
+          />
+          <p-tag class="ml-2" severity="success" value="Low" />
+          <p-tag class="ml-2" severity="info" value="Sprint-4" />
+          <p-tag
+            icon="pi pi-lightbulb"
+            class="ml-2"
+            severity="success"
+            value="Requirement"
+          />
+          <span class="ml-4">Taskname NAT-4</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 mr-4">
+      <p-tag severity="warning" value="Not started" [rounded]="true" />
+    </div>
+  </div>
+  
+</div>

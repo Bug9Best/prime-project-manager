@@ -1,31 +1,21 @@
-<div class="flex justify-content-between">
-    <p class="ml-3">Total-issue</p>
-    <p-button class="mr-3 mt-2" label="Edit" />
+<div class="surface-card shadow-2 border-round p-3 h-screen">
+    <div class="flex align-items-center justify-content-between mb-4">
+        <span class="font-bold text-900">Task</span>
+        
+    </div>
+    <div class="surface-border p-3 mb-4 flex justify-content-center align-content-center">
+        <span class="text-600 text-8xl">14</span>
+    </div>
+    <ul class="mt-4 list-none p-0 mx-0">
+        <li class="flex align-items-center">
+            <span style="width:1rem;height:1rem" class="border-round bg-red-500 mr-3 flex-shrink-0"></span>
+            <span class="font-medium text-90">Bug</span>
+            <span class="text-600 font-medium ml-auto">10</span>
+        </li>
+        <li class="flex align-items-center mt-2">
+            <span style="width:1rem;height:1rem" class="border-round bg-blue-500 mr-3 flex-shrink-0"></span>
+            <span class="font-medium text-90">issue</span>
+            <span class="text-600 font-medium ml-auto">4</span>
+        </li>
+    </ul>
 </div>
-<div class="card mt-2">
-    <p-table
-      [value]="value"
-      [(selection)]="memberItem"
-      dataKey="id"
-      [scrollable]="true"
-      scrollHeight="1000px"
-      [tableStyle]="{ 'min-width': '50rem' }"
-    >
-      <ng-template pTemplate="header">
-        <tr>
-          <th>Test</th>
-          <th>Test</th>
-          <th class="text-center">Action</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-item>
-        <tr class="align-items-center">
-          <td>{{ item.name }}</td>
-          <td>{{ item.roles }}</td>
-          <td class="text-center">
-            <p class="text-400 hover:text-red-500 cursor-pointer">X</p>
-          </td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </div>
