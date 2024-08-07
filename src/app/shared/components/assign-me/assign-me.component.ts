@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { ChartModule } from 'primeng/chart';
+import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
 
 @Component({
   selector: 'assign-me',
   standalone: true,
-  imports: [ButtonModule, TableModule],
+  imports: [ButtonModule, TableModule, TagModule, DividerModule, ChartModule],
   templateUrl: './assign-me.component.html',
-  styleUrl: './assign-me.component.scss'
+  styleUrl: './assign-me.component.scss',
 })
 export class AssignMeComponent {
+  items: any[] = [
+    { name: 'Taskname kiw' },
+    { name: 'Taskname kiw' },
+    { name: 'Taskname kiw' },
+    { name: 'Taskname kiw' },
+  ];
 
   assignMe() {}
   memberItem!: any;
@@ -17,12 +26,12 @@ export class AssignMeComponent {
     {
       id: 1,
       name: 'Do some work',
-      roles: "Phuri siripool",
+      roles: 'Phuri siripool',
     },
     {
       id: 2,
       name: 'Do u',
-      roles: "Natthaphon Ditthaviboon",
+      roles: 'Natthaphon Ditthaviboon',
     },
   ];
 }
